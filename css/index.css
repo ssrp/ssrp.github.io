@@ -1,0 +1,54 @@
+body{
+	font-size:100%;
+	padding:0em;
+	margin:0em;
+	font-size: 1vw;
+	margin-bottom:0em;
+	overflow:hidden;
+	font-family: "Code";
+	background: #000000;
+	color:white;
+	background: url("../images/profile.jpg") 50% 50% fixed;
+	background-size: cover;
+}
+
+/*Title of the page*/
+#title{
+	color:white;
+
+}
+
+/*The linux console screen*/
+#consoleArea{
+	position: absolute;
+	top:6.5em;
+	left:20%;
+	width:60%;
+	color:white;
+	height:70%;
+	font-size: 1.2em;
+	overflow: auto;
+	padding: 1em;
+	opacity:1;
+	display:block;
+	border-radius: 1%;
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: all 0.4s;
+}
+#consoleArea:hover{
+	transform:scale(1.1);
+}
+/*The linux console screen*/
+#console{
+	display:inline-block;
+}
+
+#textfield{
+	display: inline-block;
+	outline: none;
+	border:none;
+	background:transparent;
+	color:white;
+	font-family: "Code";
+	font-size: 1em;
+}

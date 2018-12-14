@@ -1,8 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Hi there</title>
+	<title>Sai Samarth R Phaye's Home Page</title>
+	<link href = "css/fonts.css" rel = "stylesheet" type = "text/css" />
+	<link href = "css/index.css" rel = "stylesheet" type = "text/css" />
 </head>
-<body>
-Hi there!
+<body onload = "start();" id = "body">
+
+	<center><div id = "title">
+		<h1>SAI SAMARTH R PHAYE</h1>
+		<h2>Researcher | Developer | Composer</h2>
+	</div></center>
+	<div id = "consoleArea" onclick = "document.getElementById('textfield').focus();">
+
+		<div id = "console" style="text-align:justify"></div>
+
+    		<div id = "inputForm"><font color = 'red'>saiphaye@fakeTerminal:~$</font>&nbsp;<input type="text" id = "textfield" style = "display:inline-block;" size="50" name = "consoletext"  autocomplete="off" " autofocus/></div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script type = "text/javascript" src = "js/index.js"></script>
+
 </body>
 </html>

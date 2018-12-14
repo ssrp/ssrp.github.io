@@ -1,0 +1,13 @@
+@font-face {
+	font-family:"Sans Serif";
+	src: url("../fonts/Aaargh.ttf");
+    src: url("../fonts/aaargh.woff");
+    src: url("../fonts/aaargh.eot");
+}
+@font-face {
+    font-family: "code";
+    src: url('../fonts/Code.TTF');
+    font-weight: normal;
+    font-style: normal;
+
+}
