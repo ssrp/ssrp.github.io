@@ -112,7 +112,7 @@ function handle(){
   }
   else if(x == "open commands" || x == "commands" || x == "help")
   {
-    var reply = "Following are some commands you could use: <br> <br><b>about</b>: Find more about me!<br><b>resume</b>: Have a look at my resume!<br><b>blog</b>: Visit my blog!<br><b>publications</b>: See some of my cool research work!<br><b>feedback</b>: Give me a feedback!<br><b>contact</b>: Connect with me!<br><b>change background</b>: Change website wallpaper<br><b>toggle textanimation</b>: Turn on/off the text animation<br><b>cool website, how did you pull it off?</b><br><b>why should we hire you?</b>";
+    var reply = "Following are some commands you could use: <br> <br><b>about</b>: Find more about me!<br><b>resume</b>: Have a look at my resume!<br><b>blog</b>: Visit my blog!<br><b>publications</b>: See some of my cool research work!<br><b>feedback</b>: Give me a feedback!<br><b>contact</b>: Connect with me!<br><b>change background</b>: Change website wallpaper<br><b>toggle textanimation</b>: Turn on/off the text animation<br><b>cool website, how did you pull it off?</b>"; /*<br><b>why should we hire you?</b>*/
     ReplyBack(x, reply);
   }
   else if(x == "why should we hire you?")
