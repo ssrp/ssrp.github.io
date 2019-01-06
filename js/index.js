@@ -107,7 +107,7 @@ function handle(){
   }
   else if(x == "blog")
   {
-    var reply = "Thanks for your interest! I am still developing this part and it should be done by 30th December 2018. I have already compiled some blog-posts though, will be live soon.";
+    var reply = "Thanks for your interest! I am still developing this part and it should be done by 30th January 2019. I have already compiled some blog-posts though, will be live soon.";
     ReplyBack(x, reply);
   }
   else if(x == "open commands" || x == "commands" || x == "help")
@@ -123,7 +123,7 @@ function handle(){
   else if(x == "cool website, how did you pull it off?" || x == "cool website")
   {
     speed = 10;
-    var reply = "Thanks for your kind words. The codebase is freely available in the GitHub repository (please don't forget to give it a star if you like it). I am still developing the website in the free time and I plan to add more features for better user interaction (not every person is a nerd who likes consoles). I developed this in 5 hours and haven't updated the website since (if you still see this text, it holds true). <br><br>Please let me know what more features you would love to see (I know there's definitely including more GUI). Write me a feedback and I'll get back to you!";
+    var reply = "Thanks for your kind words. I am still developing the website in the free time and I plan to add more features for better user interaction (not every person is a nerd who likes consoles). I developed this in a few hours and haven't updated the website since (if you still see this text, it holds true). <br><br>Please let me know what more features you would love to see (I know there's definitely including more GUI). Write me a feedback and I'll get back to you!";
     ReplyBack(x, reply);
   }
   else if(x == "toggle textanimation")
