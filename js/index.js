@@ -77,13 +77,13 @@ function handle(){
   }
   else if(x == "feedback" || x == "give feedback")
   {
-    var reply = "Thank you very much, would love to hear from you! <br>You could send me an <font color = 'yellow'><i>e-mail</i> at <b>phaye[DOT]samarth@gmail[DOT]com</b></font> with <i>subject</i> \"<b>saiphaye.com feedback</b>\".";
+    var reply = "Thank you very much, would love to hear from you! <br>You could send me an <font color = 'yellow'><i>e-mail</i> at <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code></b></font> with <i>subject</i> \"<b>website feedback</b>\".";
     ReplyBack(x, reply);
   }
   else if(x == "contact")
   {
-    speed = 10
-    var reply = "Thanks for your interest, the best way to contact is via e-mail, following are some options:<br> <ol><li>Mobile: <b>+65 (0) 9869 3516</b></li><li>e-mail: <b>phaye[DOT]samarth@gmail[DOT]com, 2014csb1029@iitrpr[DOT]ac[DOT]in</b></li><li>LinkedIn: <b><a href = 'https://www.linkedin.com/in/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>GitHub: <b><a href = 'https://github.com/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>Instagram: <b><a href = \"https://www.instagram.com/_ssrp/\" style='color:yellow' target = \"_blank\">_ssrp</a></b></li><li>YouTube: <b><a href = 'https://www.youtube.com/channel/UCGx6F_XKD2JS-NJQl7liszw' target = '_blank' style='color:yellow'>geekoguitarist</a></b></li></ol>";
+    speed = 0
+    var reply = "Thanks for your interest, the best way to contact is via e-mail, following are some options:<br> <ol><li>Mobile: <b>+65 (0) 9869 3516</b></li><li>e-mail: <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code>, <code>&#x32;&#x30;&#x31;&#x34;&#x63;&#x73;&#x62;&#x31;&#x30;&#x32;&#x39;&#x40;&#x69;&#x69;&#x74;&#x72;&#x70;&#x72;&#x2E;&#x61;&#x63;&#x2E;&#x69;&#x6E;</code></b></li><li>LinkedIn: <b><a href = 'https://www.linkedin.com/in/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>GitHub: <b><a href = 'https://github.com/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>Instagram: <b><a href = \"https://www.instagram.com/_ssrp/\" style='color:yellow' target = \"_blank\">_ssrp</a></b></li><li>YouTube: <b><a href = 'https://www.youtube.com/channel/UCGx6F_XKD2JS-NJQl7liszw' target = '_blank' style='color:yellow'>geekoguitarist</a></b></li></ol>";
     ReplyBack(x, reply);
   }
   else if(x == "resume" || x == "cv")
