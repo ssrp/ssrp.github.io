@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<title>Audio Enhancement using Deep Learning
+	</title>
+
+	<!--
+		Importing the css files.
+		-->
+	<link href = "css/frame.css" rel = "stylesheet" type = "text/css" />
+	<link href = "css/resources.css" rel = "stylesheet" type = "text/css" />
+	<link href = "css/bootstrap.min.css" rel = "stylesheet" type = "text/css" />
+
+	<!--
+		Setting The Logo!
+		-->
+	<link rel="shortcut icon" href="images/icon.png">
+</head>
+<body onload = "setScreenSize()">
+	<center>
+		<div id = "container">
+			
+			<div style = "height:8em; width:75%; border:2px solid transparent; margin-top:0.2em; margin-bottom:-1em">
+				
+				<div id = "top_data" style= "display:inline-block; float: left;">
+						<h1 style = "font-family:'Varela'; padding:0em; margin-bottom:0em; padding-left:10px; padding-right:10px;">Project Description</h1>
+					<br><h3 style = "font-family:'Varela';float:left; margin:0em; padding:0em; padding-left:10px;display:inline-block; padding-right:10px">Developing an Application for Enhancement of Audio Recordings using Deep Learning Techniques</h3><br><br><br><br><br><br><br>
+				</div>
+			</div>
+
+			<div id = "navbar">
+				<br>
+				<div id = "navbar_hr">
+					<hr width = "100%"/>
+				</div>
+				<div id = "navbar_options" style= "font-size:1.1em">
+						<ul class = "toolbar">
+						  <li><a href="./index.html" style= "color:#0000A0">Introduction</a></li>
+						  <li><a class="active" href="./dataset.html" style= "color:#0000A0">Dataset</a></li>
+						  <li><a href="./deeplearning.html" style= "color:#0000A0">Model</a></li>
+						  <li><a href="./shortcomings.html" style= "color:#0000A0">Shortcomings</a></li>
+						  <li><a href="./amazonturk.html" style= "color:#0000A0">User Study</a></li>
+						  <li><a href="./conference.html" style= "color:#0000A0">Target Conference</a></li>
+						</ul>
+				</div>
+			</div>
+
+			<div id = "main_container">
+				<h2>Recording Devices</h2>
+				For the recording, we used the following devices:<br>
+				<ol>
+					<li>Samsung S5</li>
+					<li>Samsung J1Prime</li>
+					<li>Samsung S3</li>
+					<li>Apple iPod Touch</li>
+					<li>Condenser microphone (need to check the name)</li>
+				</ol>
+				We specifically choose these devices because we want to use bad quality microphones (worse the better) and try to enhance the quality of the recording. Samsung S5 and Condenser microphone recordings are the best quality recordings out of others (perceptually).
+				
+				<h2>Procedure</h2>
+				We downloaded the freely accessible <a href = "https://github.com/mdeff/fma">FMA Small Dataset</a> (containing 8000 tracks with the length of 30s) for the recording procedure. We created a concatenated version of this audio file (each file having 400 samples) and recorded these four-hour files (only 5 of them, due to time constraints) using the five microphones mentioned above.
+				<br><br>
+				After recording, we cleaned and re-aligned the dataset and finally, we currently have a dataset having 2000 samples recorded from each device (each 30 seconds). In addition, we also performed wav-normalization for all the files. The final dataset has 2000 mono-channel samples saved with 44100 sampling rate.
+				
+				<h2>Examples</h2>
+				Following are some of the samples we recorded on the devices:
+				<ol>
+					<li>Original Audio:  <br><audio controls><source src="audio/orig/000002.mp3" type="audio/mpeg"></audio>
+						<ul>
+							<li>Samsung S5:  <br><audio controls><source src="audio/s5/000002.wav" type="audio/wav"></audio></li>
+							<li>Samsung J1Prime:  <br><audio controls><source src="audio/j1/000002.wav" type="audio/wav"></audio></li>
+							<li>Samsung S3:  <br><audio controls><source src="audio/s3/000002.wav" type="audio/wav"></audio></li>
+							<li>Apple iPod Touch:  <br><audio controls><source src="audio/ipod/000002.wav" type="audio/wav"></audio></li>
+							<li>Condenser microphone:  <br><audio controls><source src="audio/cm/000002.wav" type="audio/wav"></audio></li>
+						</ul>
+					</li>
+					<li>Original Audio:  <br><audio controls><source src="audio/orig/000005.mp3" type="audio/mpeg"></audio>
+						<ul>
+							<li>Samsung S5:  <br><audio controls><source src="audio/s5/000005.wav" type="audio/wav"></audio></li>
+							<li>Samsung J1Prime:  <br><audio controls><source src="audio/j1/000005.wav" type="audio/wav"></audio></li>
+							<li>Samsung S3:  <br><audio controls><source src="audio/s3/000005.wav" type="audio/wav"></audio></li>
+							<li>Apple iPod Touch:  <br><audio controls><source src="audio/ipod/000005.wav" type="audio/wav"></audio></li>
+							<li>Condenser microphone:  <br><audio controls><source src="audio/cm/000005.wav" type="audio/wav"></audio></li>
+						</ul>
+					</li>
+					<li>Original Audio:  <br><audio controls><source src="audio/orig/000010.mp3" type="audio/mpeg"></audio>
+						
+						<ul>
+							<li>Samsung S5:  <br><audio controls><source src="audio/s5/000010.wav" type="audio/wav"></audio></li>
+							<li>Samsung J1Prime:  <br><audio controls><source src="audio/j1/000010.wav" type="audio/wav"></audio></li>
+							<li>Samsung S3:  <br><audio controls><source src="audio/s3/000010.wav" type="audio/wav"></audio></li>
+							<li>Apple iPod Touch:  <br><audio controls><source src="audio/ipod/000010.wav" type="audio/wav"></audio></li>
+							<li>Condenser microphone:  <br><audio controls><source src="audio/cm/000005.wav" type="audio/wav"></audio></li>
+						</ul>
+					</li>
+					<li>Original Audio:  <br><audio controls><source src="audio/orig/000140.mp3" type="audio/mpeg"></audio>
+						
+						<ul>
+							<li>Samsung S5:  <br><audio controls><source src="audio/s5/000140.wav" type="audio/wav"></audio></li>
+							<li>Samsung J1Prime:  <br><audio controls><source src="audio/j1/000140.wav" type="audio/wav"></audio></li>
+							<li>Samsung S3:  <br><audio controls><source src="audio/s3/000140.wav" type="audio/wav"></audio></li>
+							<li>Apple iPod Touch:  <br><audio controls><source src="audio/ipod/000140.wav" type="audio/wav"></audio></li>
+							<li>Condenser microphone:  <br><audio controls><source src="audio/cm/000140.wav" type="audio/wav"></audio></li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+		<Br><br>
+
+
+		</div>
+	</center>
+	
+	<script src="js/frame.js"></script>
+</body>
+</html>

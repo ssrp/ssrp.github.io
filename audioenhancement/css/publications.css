@@ -1,0 +1,12 @@
+#container_top
+{
+	display: block;
+}
+#main_container
+{
+	text-align:left;
+	font-family: 'Helvetica';
+}
+li{
+	content: "&rarr;";
+}

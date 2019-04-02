@@ -1,0 +1,67 @@
+#container_top
+{
+	display: block;
+}
+#container_top_image
+{
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	border-radius: 20%;
+}
+#container_top_data
+{
+	font-family: 'Garamond';
+	margin-left: 1em;
+	padding-left: 1em;
+	text-align: left;
+	vertical-align: middle;
+	display:inline-block;
+	color: #333333;
+	border-left:0.1em solid #CCCCCC;
+}
+#container_top_data>h3
+{
+	margin:0em;
+	padding:0.05em;
+}
+#container_data_one
+{
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	border-radius: 20%;
+	font-family: 'Garamond';
+	font-size: 1.1em;
+	padding:1em;
+	text-align: left;
+}
+.container_data_updates
+{
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
+	font-family: 'Helvetica';
+	font-size: 1.1em;
+}
+#container_recent_updates{
+	text-align:left;
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
+	font-family: 'Helvetica';
+	font-size: 1.1em;
+}
+li{
+	content: "&rarr;";
+}
+
+#recent_updates_length{
+	display:none;
+}
+#recent_updates_filter{
+	display:none;
+}
+#recent_updates_info{
+	display:none;
+}
