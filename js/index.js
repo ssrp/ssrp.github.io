@@ -1,9 +1,9 @@
 var flag = false;
 var i = 0;
 var timeOut;
-var speed = 20;
-var defaultSpeed = 20;
-var betweenSpeed = 100;
+var speed = 0; //20;
+var defaultSpeed = 0; //20;
+var betweenSpeed = 0; //100;
 var wallpaper_location = ['budapest.jpg', 'capri.jpg', 'manali.jpg', 'restaurant.jpg', 'xincheng.jpg', 'milan.jpg', 'paris.jpg', 'pompeii.jpg', 'nice.jpg', 'accv-perth.jpg', 'bali.jpg', 'bali2.jpg', 'kingspark.jpg', 'nus.jpg', 'paris-seine.JPG', 'paris-seine2.JPG']
 var wallpaper_label = ['Budapest, Hungary', 'Capri, Italy', 'Manali, India', 'Manali, India', 'Xincheng, Taiwan', 'Milan, Italy', 'Paris, France', 'Pompeii, Italy', 'Nice, France', 'Perth Convention and Exhibition Centre, Australia', 'Bali, Indonesia', 'Bali, Indonesia', 'Kings Park, Perth, WA', 'National University of Singapore, Singapore', 'Paris, France', 'Paris, France']
 
