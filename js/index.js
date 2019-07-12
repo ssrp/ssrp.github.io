@@ -4,8 +4,8 @@ var timeOut;
 var speed = 20;
 var defaultSpeed = 20;
 var betweenSpeed = 100;
-var wallpaper_location = ['budapest.jpg', 'capri.jpg', 'manali.jpg', 'restaurant.jpg', 'xincheng.jpg', 'milan.jpg', 'paris.jpg', 'pompeii.jpg', 'nice.jpg', 'profile.jpg', 'bali.jpg', 'bali2.jpg', 'kingspark.jpg', 'nus.jpg']
-var wallpaper_label = ['Budapest, Hungary', 'Capri, Italy', 'Manali, India', 'Manali, India', 'Xincheng, Taiwan', 'Milan, Italy', 'Paris, France - obviously', 'Pompeii, Italy', 'Nice, France', 'Perth Convention and Exhibition Centre, Australia', 'Bali, Indonesia', 'Bali, Indonesia', 'Kings Park, Perth, WA', 'National University of Singapore, Singapore']
+var wallpaper_location = ['budapest.jpg', 'capri.jpg', 'manali.jpg', 'restaurant.jpg', 'xincheng.jpg', 'milan.jpg', 'paris.jpg', 'pompeii.jpg', 'nice.jpg', 'accv-perth.jpg', 'bali.jpg', 'bali2.jpg', 'kingspark.jpg', 'nus.jpg', 'paris-seine.JPG', 'paris-seine2.JPG']
+var wallpaper_label = ['Budapest, Hungary', 'Capri, Italy', 'Manali, India', 'Manali, India', 'Xincheng, Taiwan', 'Milan, Italy', 'Paris, France', 'Pompeii, Italy', 'Nice, France', 'Perth Convention and Exhibition Centre, Australia', 'Bali, Indonesia', 'Bali, Indonesia', 'Kings Park, Perth, WA', 'National University of Singapore, Singapore', 'Paris, France', 'Paris, France']
 
 // This function is used to pause in between for some milliseconds
 function pause(milliseconds) {
