@@ -196,7 +196,7 @@ function handle(){
   else if(x == "cool website, how did you pull it off?" || x == "cool website")
   {
     speed = 10;
-    var reply = "Thanks for your kind words haha ^_^ I enjoy web-development and I design this website whenever I want to take a break from research. I plan to add more features for better user interaction (not every person is a nerd who likes consoles). <br><br>Please let me know what other features you would love to see and I'll try my best to get you the best user experience. Write me a feedback at <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code></b> and I'll get back to you!";
+    var reply = "Thanks for your kind words haha ^_^ I enjoy web-development and I intermittently work on this website whenever I feel like taking a break from research. I plan to add more features for better user interaction (not every person is a nerd who likes consoles). <br><br>Please let me know what other features you would love to see and I'll try my best to get you the best user experience. Write me a feedback at <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code></b> and I'll get back to you!";
     ReplyBack(x, reply);
   }
   else if(x == "toggle textanimation")
