@@ -113,7 +113,6 @@ function handle(){
   }
   else if(x == "change bg" || x == "change background" || x == "change wallpaper")
   {
-    document.getElementById("background_video").muted=true;
     document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "0";
     ind = Math.floor((Math.random() * wallpaper_location.length));
     // SET WALLPAPER wallpaper_location[ind]
