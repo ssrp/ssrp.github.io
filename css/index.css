@@ -17,11 +17,13 @@ body{
 	color:white;
 
 }
-
+#fullscreen-bg{
+	opacity:0;
+}
 /*The linux console screen*/
 #consoleArea{
 	position: absolute;
-	top:6.5em;
+	top:13em;
 	left:20%;
 	width:60%;
 	color:white;
@@ -51,4 +53,21 @@ body{
 	color:white;
 	font-family: "Code";
 	font-size: 1em;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0em;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    top: 0em;
+    left: 0em;
+    width: 100%;
+    height: auto;
 }

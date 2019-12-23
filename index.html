@@ -2,23 +2,57 @@
 <html>
 <head>
 	<title>Sai Samarth R Phaye's Home Page</title>
+	<!--
+		Importing the css files.
+		-->
+	<link href = "css/frame.css" rel = "stylesheet" type = "text/css" />
+	<link href = "css/bootstrap.min.css" rel = "stylesheet" type = "text/css" />
 	<link href = "css/fonts.css" rel = "stylesheet" type = "text/css" />
-	<link href = "css/index.css" rel = "stylesheet" type = "text/css" />
+	<link href ="css/index.css" rel = "stylesheet" type ="text/css" />
+
 </head>
 <body onload = "start();" id = "body">
 
-	<center><div id = "title">
-		<h1>SAI SAMARTH R PHAYE</h1>
-		<h2>Researcher | Developer | Composer</h2>
-	</div></center>
+	<center>
+		<div id = "title">
+			<h1>SAI SAMARTH R PHAYE</h1>
+			<h2>Researcher | Composer | Developer</h2>
+		</div>
+		<div id = "navbar">
+			<br><br><br>
+			<!-- <div id = "navbar_hr">
+				 <hr width = "100%"/>
+			</div> -->
+			<div id = "navbar_options" style= "font-size:1.1em">
+					<ul class = "toolbar">
+					<li><a href="javascript:void(0);" onclick="nav_click('about')" style= "color:#FFFFFF"><b>a</b>bout</a></li>
+					<li><a href="javascript:void(0);" onclick="nav_click('research')" style= "color:#FFFFFF"><b>r</b>esearch</a></li>
+					<li><a href="javascript:void(0);" onclick="nav_click('music')" style= "color:#FFFFFF"><b>m</b>usic</a></li>
+					<li><a href="javascript:void(0);" onclick="nav_click('writings')" style= "color:#FFFFFF"><b>w</b>ritings</a></li>
+					<li><a href="javascript:void(0);" onclick="nav_click('contact')" style= "color:#FFFFFF"><b>c</b>ontact</a></li>
+					<li><a href="javascript:void(0);" onclick="nav_click('commands')" style= "color:#FFFFFF"><b>c</b>ommands</a></li>
+					</ul>
+			</div>
+		</div>
+	</center>
 	<div id = "consoleArea" onclick = "document.getElementById('textfield').focus();">
 
 		<div id = "console" style="text-align:justify"></div>
 
-    		<div id = "inputForm"><font color = 'red'>saiphaye@fakeTerminal:~$</font>&nbsp;<input type="text" id = "textfield" style = "display:inline-block;" size="50" name = "consoletext"  autocomplete="off" " autofocus/></div>
+    		<div id = "inputForm"><hr><font color = 'red'>saiphaye@fakeTerminal:~$</font>&nbsp;<input type="text" id = "textfield" style = "display:inline-block;" size="50" name = "consoletext"  autocomplete="off" " autofocus/></div>
 	</div>
+	
 	<script src="js/jquery.min.js"></script>
 	<script type = "text/javascript" src = "js/index.js"></script>
+
+	<div id="fullscreen-bg" class="fullscreen-bg">
+	    <video loop muted poster="images/video_First_Frame.png" id="background_video" class="fullscreen-bg__video">
+	        <source src="images/video.mp4" type="video/mp4">
+			<source src="images/video.webm" type="video/webm">
+			<source src="images/video.ogg" type="video/ogg">
+	    </video>
+	</div>
+
 
 </body>
 </html>

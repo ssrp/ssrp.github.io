@@ -4,6 +4,7 @@ var timeOut;
 var speed = 0; //20;
 var defaultSpeed = 0; //20;
 var betweenSpeed = 0; //100;
+var text_animation = false;
 var wallpaper_location = ['budapest.jpg', 'capri.jpg', 'manali.jpg', 'restaurant.jpg', 'xincheng.jpg', 'milan.jpg', 'paris.jpg', 'pompeii.jpg', 'nice.jpg', 'accv-perth.jpg', 'bali.jpg', 'bali2.jpg', 'kingspark.jpg', 'nus.jpg', 'paris-seine.JPG', 'paris-seine2.JPG']
 var wallpaper_label = ['Budapest, Hungary', 'Capri, Italy', 'Manali, India', 'Manali, India', 'Xincheng, Taiwan', 'Milan, Italy', 'Paris, France', 'Pompeii, Italy', 'Nice, France', 'Perth Convention and Exhibition Centre, Australia', 'Bali, Indonesia', 'Bali, Indonesia', 'Kings Park, Perth, WA', 'National University of Singapore, Singapore', 'Paris, France', 'Paris, France']
 
@@ -16,41 +17,88 @@ flag = false;
 // This function does the job of printing at the given 'speeed', WHERE(which div), 'text'.
 function dynamicprint(speed, where, string) {
   flag = false;
-  document.getElementById("inputForm").style.opacity=0;
-  timeOut = setInterval(function(){
-    i++;
-  print = string.substring(0,i);
-  if(i == string.length)
-    {
-    clearInterval(timeOut);flag = true;document.getElementById("inputForm").style.opacity=1; speed = defaultSpeed}
-  document.getElementById("consoleArea").scrollTop = document.getElementById("consoleArea").scrollHeight;
-  document.getElementById(where).innerHTML = print;
+  if(text_animation){
+      document.getElementById("inputForm").style.opacity=0;
+      timeOut = setInterval(function(){
+        i++;
+      print = string.substring(0,i);
+      if(i == string.length)
+        {
+        clearInterval(timeOut);flag = true;document.getElementById("inputForm").style.opacity=1; speed = defaultSpeed; 
+        }
+      document.getElementById("consoleArea").scrollTop = document.getElementById("consoleArea").scrollHeight;
+      document.getElementById(where).innerHTML = print;
 
-  if(i %30 == 29)
-    pause(betweenSpeed); // extra waits
-  }, speed);
+      if(i % 3000 == 29)
+        pause(betweenSpeed); // extra waits
+      }, speed);
+  }
+  else{
+    document.getElementById(where).innerHTML = string;
+    document.getElementById("consoleArea").scrollTop = document.getElementById("consoleArea").scrollHeight;
+    i = string.length;
+    flag = true;
+  }
 }
 // this function starts the console
 function start()
 {
-  speed = 15
+  speed = 1;
   //setTimeout(function(){i = 0; clearInterval(timeOut); dynamicprint(50, "infogames", "");}, 1200);
-   dynamicprint(speed, "console", "<font color = 'red'>saiphaye@fakeTerminal:~$</font> cat info_saiphaye.txt<br><h4>Hey there! Welcome to my personal website!</h4><br>I am currently a research intern in Sound and Music Computing Lab at National University of Singapore. Under the supervision of Prof. Ye Wang, I am researching full-time on developing novel <font color = 'yellow'>Deep Learning methods for Acoustic Scene Classification</font>. My research interests include <font color = 'red'>Deep Learning, Computer Vision and Multimedia Processing</font>. <br> <br>Currently the website is under construction and hence, the console UI. Still, I have added some commands to access my records and also to play around with the website (type \"help\" for more details).<br><br>BIG NEWS: My debut (an instrumental piece) coming very soon! Visit <a href = 'https://narked.com' target='_blank'>narked.com</a> for more details! ^^<br><br>NOTE: PLEASE USE THE FULLSCREEN MODE (F11 on Chrome) FOR BETTER EXPERIENCE.<br><br>");
-  //setTimeout(function(){document.getElementById("textform").style.opacity = 1; document.getElementById("textform").style.display = "inline-block"; }, 10);
+   dynamicprint(speed, "console", "<font color = 'red'>saiphaye@fakeTerminal:~$</font> cat info_saiphaye.txt<br><h4>Hey there! Welcome to my personal website!</h4><br>I am currently a <font color = 'yellow'>Machine Learning Engineer at Panasonic Industrial Devices Singapore</font>. Before joining Panasonic, I worked at the <font color = 'cyan'>Sound and Music Computing Lab, National University of Singapore</font> where I researched on Computational Sound Scene Analysis. I graduated from <font color = 'red'>Indian Institute of Technology Ropar</font>, India in 2018 where I worked on Face Analytics and Object Detection. I am interested in Machine Learning, specially for music informatics and audiovisual computing. Have a look at my <a href ='./docs/SaiSamarthRPhaye_Resume.pdf' style='color:yellow' target='_blank'>CV</a> for more details.<br><br>I enjoy playing music on any instrument I get my hands on and love to compose new music on my guitar <i>(mostly mellow, to make you cry)</i>. I'd call myself peripatetic and I have stories to tell from over 14 different countries. In my free time, I play badminton, listen to music and read about rationality. <br><br>For now, I have incorporated some commands to play around with this website (type \"help\" for more details).<br><br>NOTE: PLEASE USE THE FULLSCREEN MODE FOR BETTER EXPERIENCE.<br><br>");
   
 }
 
 function ReplyBack(x, reply){
     reply = reply.concat("<br><br>");
     var string = document.getElementById("console").innerHTML;
-    var lolwa = "<font color = 'red'>saiphaye@fakeTerminal:~$</font> " + x + "<br>";
-    string = string.concat(lolwa);
-    console.log(i)
-    i = i + lolwa.length;
-    console.log(i)
+    var default_str = "<font color = 'red'>saiphaye@fakeTerminal:~$</font> " + x + "<br>";
+    string = string + default_str;
+    i =  i + default_str.length;
     string = string.concat(reply);
     dynamicprint(speed, "console", string);
     document.getElementById("textfield").value = "";
+}
+
+function nav_click(x){
+
+  document.getElementById("background_video").muted=true;
+  document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "0";
+  if(x == "about")
+  {
+    document.getElementById("textfield").value = "about";
+    if(flag==true) handle();
+  }
+  else if(x == "research")
+  {
+    document.getElementById("textfield").value = "research";
+    if(flag == true) handle();
+  }
+  else if(x == "music")
+  {
+    if(flag == true) {
+      document.getElementById("background_video").muted=false;
+      document.getElementById("background_video").play();
+      document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "1";
+      document.getElementById("textfield").value = "music";
+      handle();
+    }
+  }
+  else if(x == "writings")
+  {
+    document.getElementById("textfield").value = "writings";
+    if(flag == true) handle();
+  }
+  else if(x == "contact")
+  {
+    document.getElementById("textfield").value = "contact";
+    if(flag == true) handle();
+  }
+  else if(x == "commands")
+  {
+    document.getElementById("textfield").value = "commands";
+    if(flag == true) handle();
+  }
 }
 
 // this function is called when we submit the text box
@@ -60,11 +108,13 @@ function handle(){
   x = x.replace(/\s+/g,' ').trim();
   if(x == "hi" || x == "hi" || x == "hii" || x == "bonjour" || x == "hello" || x == "hey" || x == "heyy")
   {
-    var reply = "Hey there! ^_^ Hope you are having a great time exploring my website!";
+    var reply = "Hey there! ^_^ Thank you for visiting my website!";
     ReplyBack(x, reply);
   }
-  else if(x == "change background" || x == "change wallpaper")
+  else if(x == "change bg" || x == "change background" || x == "change wallpaper")
   {
+    document.getElementById("background_video").muted=true;
+    document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "0";
     ind = Math.floor((Math.random() * wallpaper_location.length));
     // SET WALLPAPER wallpaper_location[ind]
     $("#body").fadeOut(200, //Speed
@@ -77,42 +127,65 @@ function handle(){
   }
   else if(x == "feedback" || x == "give feedback")
   {
-    var reply = "Thank you very much, would love to hear from you! <br>You could send me an <font color = 'yellow'><i>e-mail</i> at <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code></b></font> with <i>subject</i> \"<b>website feedback</b>\".";
+    var reply = "Thank you very much, would love to hear from you! <br>You could send me an <font color = 'yellow'>e-mail at <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code></b></font> with <i>subject</i> \"<b>website feedback</b>\".";
+    ReplyBack(x, reply);
+  }
+  else if(x == "email")
+  {
+    var reply = "<b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code>, <code>&#x32;&#x30;&#x31;&#x34;&#x63;&#x73;&#x62;&#x31;&#x30;&#x32;&#x39;&#x40;&#x69;&#x69;&#x74;&#x72;&#x70;&#x72;&#x2E;&#x61;&#x63;&#x2E;&#x69;&#x6E;</code></b></font>";
+    ReplyBack(x, reply);
+  }
+  else if(x == "about")
+  {
+    if(defaultSpeed != 0 && defaultSpeed <=30) 
+      speed = 10
+    var reply = "I was born and raised in Raipur, a city in central India. I completed my Bachelor of Technology in Computer Science and Engineering from <font color = 'yellow'>Indian Institute of Technology Ropar</font> in 2018. Post bachelors, I joined <font color = 'orange'>National University of Singapore</font> as a graduate researcher under the supervision of A/Prof. Wang Ye from NUS and Dr. Emmanouil Benetos from the School of EECS, Queen Mary University of London to work on Computational Sound Scene Analysis. Currently working as a <font color = 'yellow'>Machine Learning Engineer at Panasonic Industrial Devices Singapore</font>, I am developing human sensing technologies using machine learning. I spend my time on demographics detection using facial images and developing models deployable on the edge without compromising the performance. Have a look at my <a href ='./docs/SaiSamarthRPhaye_Resume.pdf' style='color:yellow' target='_blank'>Resume</a> for more details. I am interested in Machine Learning, specially for music informatics and audiovisual computing.<br><br>I enjoy playing music on any instrument I get my hands on and love to compose new music on my guitar <i>(mostly mellow, to make you cry)</i>. I'd call myself peripatetic and I have stories to tell from over 14 different countries. In my free time, I play badminton, listen to music and read about rationality. <br><br>For now, I have incorporated some commands to play around with this website (type \"help\" for more details).<br><br>NOTE: PLEASE USE THE FULLSCREEN MODE FOR BETTER EXPERIENCE.";
+    ReplyBack(x, reply);
+  }
+  else if(x == "unmute")
+  {
+    document.getElementById("background_video").muted=false;
+    document.getElementById("background_video").play();
+    var reply = "Unmuted!";
+    ReplyBack(x, reply);
+  }
+  else if(x == "mute")
+  {
+    document.getElementById("background_video").muted=true;
+    var reply = "Muted!";
+    ReplyBack(x, reply);
+  }
+  else if(x == "music")
+  {
+    var reply = "Having taken to the tabla at a very early age, my diverse musical influences ranging from the the likes of Linkin Park to Michael Jackson, soon I started exploring my creativity on an old acoustic guitar borrowed from an uncle. I found himself spending hours trying to work out new and interesting harmonic progressions; or crafting interesting melodies on the instrument. <br> <br> Playing the guitar became an outlet for everything I wished to express and soon it cultivated in me a burning passion to create my own unique brand of art. <br> <br> During my undergraduate studies at IIT Ropar in India, I performed at numerous musical events and honed my skills in the art of finger-style and improvisational techniques like percussive guitar work. At one point, during a trip to France, I even busked on the streets of Paris, an experience that will stay with me for a lifetime.<br> <br> My passion for music led me to pursue scientific research in the field of Audio Informatics at NUS, Singapore and during this time I also performed with the highly acclaimed NUS Guitar Ensemble. <br> <br> Alongside research, I am inspired to become a singer-songwriter in addition to crafting beautiful instrumental pieces like <a href='https://www.youtube.com/watch?v=58SS6Z-6Ymc' style='color:yellow' target='_blank'>Child's Play</a>.";
     ReplyBack(x, reply);
   }
   else if(x == "contact")
   {
     speed = 1
-    var reply = "Thanks for your interest, the best way to contact is via e-mail, following are some options:<br> <ol><li>Mobile: <b>+65 (0) 9869 3516</b></li><li>e-mail: <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code>, <code>&#x32;&#x30;&#x31;&#x34;&#x63;&#x73;&#x62;&#x31;&#x30;&#x32;&#x39;&#x40;&#x69;&#x69;&#x74;&#x72;&#x70;&#x72;&#x2E;&#x61;&#x63;&#x2E;&#x69;&#x6E;</code></b></li><li>LinkedIn: <b><a href = 'https://www.linkedin.com/in/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>GitHub: <b><a href = 'https://github.com/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>Instagram: <b><a href = \"https://www.instagram.com/_ssrp/\" style='color:yellow' target = \"_blank\">_ssrp</a></b></li><li>YouTube: <b><a href = 'https://www.youtube.com/channel/UCGx6F_XKD2JS-NJQl7liszw' target = '_blank' style='color:yellow'>geekoguitarist</a></b></li></ol>";
+    var reply = "Thanks for your interest, the best way to contact is via e-mail, following are some options:<br> <ol style='margin-bottom:-2em'><li>Mobile: <b>+65 (0) 9869 3516</b></li><li>e-mail: <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code>, <code>&#x32;&#x30;&#x31;&#x34;&#x63;&#x73;&#x62;&#x31;&#x30;&#x32;&#x39;&#x40;&#x69;&#x69;&#x74;&#x72;&#x70;&#x72;&#x2E;&#x61;&#x63;&#x2E;&#x69;&#x6E;</code></b></li><li>LinkedIn: <b><a href = 'https://www.linkedin.com/in/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>GitHub: <b><a href = 'https://github.com/ssrp/' style='color:yellow' target = '_blank'>ssrp</a></b></li><li>Instagram: <b><a href = \"https://www.instagram.com/_ssrp/\" style='color:yellow' target = \"_blank\">_ssrp</a></b></li><li>YouTube: <b><a href = 'https://www.youtube.com/channel/UCGx6F_XKD2JS-NJQl7liszw' target = '_blank' style='color:yellow'>saiphaye</a></b></li></ol>";
     ReplyBack(x, reply);
   }
   else if(x == "resume" || x == "cv")
   {
 
     // TO DO
-    var reply = "<font color = 'yellow'><a href ='./docs/1PageResume.pdf' style='color:yellow' target='_blank'>Here's the PDF version</a></font> of my one-page resume. The website version is currently under development.";
+    var reply = "<font color = 'yellow'><a href ='./docs/SaiSamarthRPhaye_Resume.pdf' style='color:yellow' target='_blank'>Here's a PDF version</a></font> of my resume.";
     ReplyBack(x, reply);
   }
-  else if(x == "about")
+  else if(x == "publications" || x == "publication" || x == "research")
   {
-    if(defaultSpeed != 0 && defaultSpeed <=30) 
-      speed = 30
-    var reply = "I was born and raised in Raipur, a city in central India. I have completed my Bachelor of Technology in Computer Science major from <font color = 'yellow'>Indian Institute of Technology Ropar</font> in 2018. After bachelors, I joined <font color = 'orange'>National University of Singapore</font> as a research intern under the supervision of A/Prof. Wang Ye from NUS and Dr. Emmanouil Benetos (in collaboration) from the School of EECS, Queen Mary University of London. My current work is based on exploring novel deep learning methods for Acoustic Scene Classification, which is a hot topic in Signal Processing Community. In general, my research interests include <font color = '#bb88bb'>Deep Learning, Computer Vision and Multimedia Processing</font>. I have a predilection for the whole process of research, beginning with defining a problem statement, formulating and validating hypotheses, and finally logging everything. <br><br>Other than research, I am interested in <font color = 'yellow'>composing music</font> (being a guitarist) and playing badminton. Currently, I am a part of the NUS Guitar Ensemble where I am learning and filling the gaps in my understanding and I hope to become a connoisseur of music in the following years. I also like to travel and have travelled over <font color = 'red'>16 different countries in the last two years</font>.";
+    var reply = "<a href = 'https://scholar.google.com/citations?user=Ds047PsAAAAJ&hl=en' style='color:yellow' target='_blank'>Click here</a> to get to my Google Scholar page. I was fortunate to publish my creative ideas in conferences such as IEEE ICASSP, ACCV and IEEE ISM. I have also co-authored a journal article published in Medical Image Analysis. For more details, here's my <font color = 'yellow'><a href ='./docs/SaiSamarthRPhaye_Resume.pdf' style='color:yellow' target='_blank'>Resume</a></font>.";
     ReplyBack(x, reply);
   }
-  else if(x == "publications" || x == "publication")
+  else if(x == "blog" || x == "writings" || x == "writing")
   {
-    var reply = "<a href = 'https://scholar.google.com/citations?user=Ds047PsAAAAJ&hl=en' style='color:yellow' target='_blank'>Click here</a> to get to my Google Scholar page. I have two accepted papers (IEEE ISM 2017, ACCV 2018) and one under review (ICASSP 2019). More details found on my Resume.";
-    ReplyBack(x, reply);
-  }
-  else if(x == "blog")
-  {
-    var reply = "Thanks for your interest! I am still developing this part and it should be done by 30th January 2019. I have already compiled some blog-posts though, will be live soon.";
+    var reply = "<h4>#0 <a href ='https://saiphaye.wordpress.com/2017/09/08/people-perception-math/' style='color:yellow' target='_blank'>People. Perception. Math.</a></h4><h4>#1 <a href ='https://saiphaye.wordpress.com/2017/09/22/when-do-i-cry-emotions-are-good/' style='color:yellow' target='_blank'>Emotions are good.</a></h4><h4>#2 <a href ='javascript:void(0);' style='color:yellow' target='_blank'>Traveling Back in Time (theoretically?)</a></h4><h4>#3 <a href ='javascript:void(0);' style='color:yellow' target='_blank'>GRE: an year of mental preparation and three weeks of hard work</a></h4><h4>#4 <a href ='javascript:void(0);' style='color:yellow' target='_blank'>I make music and music makes me, me.</a></h4><br>Please note that <i>only the first blog is active</i> and I am currently compiling other blog posts and integrating them with this website instead of wordpress. Will be released soon.";
     ReplyBack(x, reply);
   }
   else if(x == "open commands" || x == "commands" || x == "help")
   {
-    var reply = "Following are some commands you could use: <br> <br><b>about</b>: Find more about me!<br><b>resume</b>: Have a look at my resume!<br><b>blog</b>: Visit my blog!<br><b>publications</b>: See some of my cool research work!<br><b>feedback</b>: Give me a feedback!<br><b>contact</b>: Connect with me!<br><b>change background</b>: Change website wallpaper<br><b>toggle textanimation</b>: Turn on/off the text animation<br><b>cool website, how did you pull it off?</b>"; /*<br><b>why should we hire you?</b>*/
+    var reply = "Following are some commands you could use: <br> <br><b>about</b>: Find more about me!<br><b>resume</b>: Have a look at my resume!<br><b>blog</b>: View my blogs!<br><b>publications</b>: See some of my cool research work!<br><b>feedback</b>: Give me a feedback!<br><b>mute/unmute</b>: Mute or unmute the background music!<br><b>contact</b>: Connect with me!<br><b>change background</b>: Change website wallpaper<br><b>toggle textanimation</b>: Turn on/off the text animation<br><b>cool website, how did you pull it off?</b>"; /*<br><b>why should we hire you?</b>*/
     ReplyBack(x, reply);
   }
   else if(x == "why should we hire you?")
@@ -123,13 +196,16 @@ function handle(){
   else if(x == "cool website, how did you pull it off?" || x == "cool website")
   {
     speed = 10;
-    var reply = "Thanks for your kind words. I am still developing the website in the free time and I plan to add more features for better user interaction (not every person is a nerd who likes consoles). I developed this in a few hours and haven't updated the website since (if you still see this text, it holds true). <br><br>Please let me know what more features you would love to see (I know there's definitely including more GUI). Write me a feedback and I'll get back to you!";
+    var reply = "Thanks for your kind words haha ^_^ I enjoy web-development and I design this website whenever I want to take a break from research. I plan to add more features for better user interaction (not every person is a nerd who likes consoles). <br><br>Please let me know what other features you would love to see and I'll try my best to get you the best user experience. Write me a feedback at <b><code>&#x70;&#x68;&#x61;&#x79;&#x65;&#x2E;&#x73;&#x61;&#x6D;&#x61;&#x72;&#x74;&#x68;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</code></b> and I'll get back to you!";
     ReplyBack(x, reply);
   }
   else if(x == "toggle textanimation")
   {
+    if(text_animation) text_animation = false;
+    else text_animation = true;
+
     if (defaultSpeed == 0){
-      speed = 20;
+      speed = 5;
       defaultSpeed = 20;
       betweenSpeed = 100;
     }
