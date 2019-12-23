@@ -62,8 +62,8 @@ function ReplyBack(x, reply){
 
 function nav_click(x){
 
-  document.getElementById("background_video").muted=true;
-  document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "0";
+  //document.getElementById("background_video").muted=true;
+  //document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "0";
   if(x == "about")
   {
     document.getElementById("textfield").value = "about";
