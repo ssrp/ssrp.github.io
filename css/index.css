@@ -68,7 +68,6 @@ body{
 .fullscreen-bg__video {
     top: 0em;
     left: 0em;
-    width: 100%;
-    height: auto;
-    min-height:100%;
+    width: 100% auto;
+    min-height: 100vh;
 }
