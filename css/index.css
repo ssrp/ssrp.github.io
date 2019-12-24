@@ -70,4 +70,5 @@ body{
     left: 0em;
     width: 100%;
     height: auto;
+    min-height:100%;
 }
