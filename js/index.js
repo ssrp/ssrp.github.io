@@ -79,6 +79,26 @@ function nav_click(x){
     if(flag == true) {
       document.getElementById("background_video").muted=false;
       document.getElementById("background_video").play();
+      var body = document.body,
+      html = document.documentElement;
+      var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+      var width = Math.max( body.scrollWidth, body.offsetWidth, 
+                       html.clientWidth, html.scrollWidth, html.offsetWidth );
+      if(width/height > 720/480)
+      {
+        document.getElementsByClassName("fullscreen-bg")[0].style.width = width;
+        document.getElementsByClassName("fullscreen-bg")[0].style.height = "auto";
+        document.getElementsByClassName("fullscreen-bg")[0].style.top = "0em";
+        document.getElementsByClassName("fullscreen-bg")[0].style.left = "0em";
+      }
+      else
+      {
+        document.getElementsByClassName("fullscreen-bg")[0].style.height = height;
+        document.getElementsByClassName("fullscreen-bg")[0].style.width = "auto";
+        document.getElementsByClassName("fullscreen-bg")[0].style.top = "0em";
+        document.getElementsByClassName("fullscreen-bg")[0].style.left = "0em";
+      }
       document.getElementsByClassName("fullscreen-bg")[0].style.opacity = "1";
       document.getElementById("textfield").value = "music";
       handle();
