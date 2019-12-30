@@ -87,6 +87,7 @@ function nav_click(x){
                        html.clientWidth, html.scrollWidth, html.offsetWidth );
       if(width/height > 720/480)
       {
+        console.log('width')
         document.getElementsByClassName("fullscreen-bg")[0].style.width = "100%";
         document.getElementsByClassName("fullscreen-bg")[0].style.height = "auto";
         document.getElementsByClassName("fullscreen-bg")[0].style.top = "0em";
@@ -94,6 +95,7 @@ function nav_click(x){
       }
       else
       {
+        console.log('height')
         document.getElementsByClassName("fullscreen-bg")[0].style.height = "100%";
         document.getElementsByClassName("fullscreen-bg")[0].style.width = "auto";
         document.getElementsByClassName("fullscreen-bg")[0].style.top = "0em";
