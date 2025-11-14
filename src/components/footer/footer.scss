@@ -40,6 +40,12 @@
     @include weird-medium {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     a, .footer-email-button {
       position: relative;
@@ -51,6 +57,9 @@
       outline: none;
       @include desktop {
         margin: 0 10px;
+      }
+      @include mobile {
+        margin: 5px 8px;
       }
       &:after {
         position: absolute;
@@ -78,6 +87,10 @@
         font-size: 0.9rem;
         display: inline;
         letter-spacing: 1px;
+        @include mobile {
+          font-size: 0.8rem;
+          letter-spacing: 0.5px;
+        }
         //@include little-desktop {
         //  display: none;
         //}

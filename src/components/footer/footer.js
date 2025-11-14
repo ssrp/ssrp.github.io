@@ -16,10 +16,6 @@ const socialData = [
     "url": "https://github.com/ssrp/"
   },
   {
-    "title": "instagram",
-    "url": "https://www.instagram.com/_ssrp/"
-  },
-  {
     "title": "youtube",
     "url": "https://www.youtube.com/channel/UCGx6F_XKD2JS-NJQl7liszw"
   },
