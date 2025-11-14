@@ -27,6 +27,7 @@ body {
   font-family: $Apercu;
   line-height: 1.5;
   width: 100%;
+  overflow-x: hidden;
 
   &.night {
     background-color: $night;
@@ -183,6 +184,9 @@ strong {
   display: inline-block;
   background-color: transparent;
   white-space: nowrap;
+  @include mobile {
+    white-space: normal;
+  }
   &:after {
     @include transition;
     position: relative;
@@ -203,7 +207,7 @@ strong {
 
 .small {
   font-family: 'Inconsolata', monospace;
-  font-size: 0.935rem;
+  font-size: 0.75rem;
   display: inline-block;
   margin-top: 15px;
   &:after {

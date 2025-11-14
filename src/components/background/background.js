@@ -10,7 +10,7 @@ const Background = () => (
     <div className="section__content">
       <p>
         I'm currently a Lead Audio AI/ML Engineer at&nbsp;
-        <a className="underline-link" href="https://www.logitech.com/" target="_blank" rel="noreferrer"> Logitech</a>, where I work on the Echo Cancellation project for our video-conferencing devices. I also help manage the audio pipeline for an upcoming flagship product. In addition, I’ve co-led the development of our Speech Enhancement algorithm for denoising and dereverberation, and I was fortunate to publish a paper on our training method at&nbsp;
+        <a className="underline-link" href="https://www.logitech.com/" target="_blank" rel="noreferrer"> Logitech</a>, where I work on Echo Cancellation for our video-conferencing devices and manage the audio pipeline for an upcoming flagship product. I’ve also co-led the development of a Speech Enhancement algorithm for real-time denoising and dereverberation, and our training approach was recently published at&nbsp;
         <a className="underline-link" href="https://arxiv.org/abs/2505.21156" target="_blank" rel="noreferrer">Interspeech 2025</a>.
       </p>
 
@@ -29,8 +29,9 @@ const Background = () => (
       </p>
 
       <p>
-        <strong>When I'm not at my desk</strong>, I'm composing music and creating original pieces such as&nbsp;
-        <a className="underline-link" href="https://www.youtube.com/watch?v=58SS6Z-6Ymc" target="_blank" rel="noreferrer">Child's Play</a>. I'm an ex-member of the NUS Guitar Ensemble and have performed across 14+ countries, combining my technical expertise with artistic expression. I also play badminton, run, and climb rocks.
+        <strong>When I'm not at my desk</strong>, I enjoy composing music and creating original pieces such as&nbsp;
+        <a className="underline-link" href="https://www.youtube.com/watch?v=58SS6Z-6Ymc" target="_blank" rel="noreferrer">Child's Play</a>. 
+        I'm also a former member of the NUS Guitar Ensemble. Outside of music, I’ve traveled to over 23 countries, and I like to play badminton, run, and climb rocks.
       </p>
     </div>
   </section>

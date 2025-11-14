@@ -8,8 +8,6 @@ const FeaturedProjects = () => (
       <div className="project logitech-audio">
         <figure className="project__pic">
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/1jkHToiYSIQ?si=72s1vwtJTkD7TEpA&start=4062"
             title="Not Final Cut Pro - AI Video Mashup"
             frameBorder="0"
