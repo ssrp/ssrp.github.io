@@ -4,7 +4,7 @@ import "./experience.scss"
 
 const experienceData = [
   {
-    "company": "Logitech Pte Ltd (via Luxoft Singapore)",
+    "company": "Logitech Singapore",
     "url": "https://www.logitech.com/",
     "time": "Jan 2024 - Present",
     "position": "Lead Audio AI/ML Engineer"
@@ -37,7 +37,7 @@ const experienceData = [
     "company": "Zoom Video Communications",
     "url": "https://zoom.us/",
     "time": "Oct 2021 - June 2023",
-    "position": "Audio AI Engineer/Researcher"
+    "position": "Audio AI Engineer"
   },
   {
     "company": "Shopee Singapore",
@@ -61,7 +61,7 @@ const experienceData = [
     "company": "Indian Institute of Technology Ropar",
     "url": "https://www.iitrpr.ac.in/",
     "time": "July 2014 -  2018",
-    "position": "Bachelor of Technology in Computer Science"
+    "position": "B.Tech. in Computer Science"
   },
 ]
 

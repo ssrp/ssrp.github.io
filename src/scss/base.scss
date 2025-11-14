@@ -19,6 +19,9 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background-color: $white;
   color: $dark-grey;
   font-family: $Apercu;
@@ -132,7 +135,7 @@ strong {
   }
   &__content {
     font-weight: 300;
-    font-size: 1.05em;
+    font-size: 1rem;
     width: 100%;
     max-width: 650px;
     @include tablet {
