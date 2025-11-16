@@ -9,7 +9,7 @@ const Background = () => (
     <div className="section__title">{backgroundData.title}</div>
     <div className="section__content">
       <p>
-        I'm currently a Lead Audio AI/ML Engineer at&nbsp;
+        I'm a Lead Audio AI/ML Engineer at&nbsp;
         <a className="underline-link" href="https://www.logitech.com/" target="_blank" rel="noreferrer"> Logitech</a>, where I work on Echo Cancellation for our video-conferencing devices and manage the audio pipeline for an upcoming flagship product. I’ve also co-led the development of a Speech Enhancement algorithm for real-time denoising and dereverberation, and our training approach was recently published at&nbsp;
         <a className="underline-link" href="https://arxiv.org/abs/2505.21156" target="_blank" rel="noreferrer">Interspeech 2025</a>.
       </p>

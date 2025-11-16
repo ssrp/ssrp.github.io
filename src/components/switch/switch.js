@@ -3,7 +3,7 @@ import "./switch.scss"
 
 const Switch = () => {
   const isBrowser = typeof window !== "undefined";
-  let prefersDarkMode = true;
+  let prefersDarkMode = false;
   let savedMode = false;
   if (isBrowser) {
     prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
