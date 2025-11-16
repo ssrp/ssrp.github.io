@@ -44,10 +44,11 @@ const Intro = () => {
     setIsHovering(false);
   };
 
-  // Randomly select a profile image on component mount
+  // Set profile image to 5th image
   React.useEffect(() => {
-    const randomImageNumber = Math.floor(Math.random() * 8) + 1; // Random number 1-8
-    setProfileImage(`/images/profiles/${randomImageNumber}.jpg`);
+    // const randomImageNumber = Math.floor(Math.random() * 8) + 1; // Random number 1-8
+    // setProfileImage(`/images/profiles/${randomImageNumber}.jpg`);
+    setProfileImage(`/images/profiles/5.jpg`);
   }, []);
 
   // Cycle through greetings every 2000ms (2 seconds)
