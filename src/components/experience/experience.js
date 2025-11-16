@@ -60,7 +60,7 @@ const experienceData = [
   {
     "company": "Indian Institute of Technology Ropar",
     "url": "https://www.iitrpr.ac.in/",
-    "time": "July 2014 -  2018",
+    "time": "July 2014 -  June 2018",
     "position": "B.Tech. in Computer Science"
   },
 ]
