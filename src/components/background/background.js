@@ -10,14 +10,14 @@ const Background = () => (
     <div className="section__content">
       <p>
         I'm a Lead Audio AI/ML Engineer at&nbsp;
-        <a className="underline-link" href="https://www.logitech.com/" target="_blank" rel="noreferrer"> Logitech</a>, where I work on Echo Cancellation for our video-conferencing devices and manage the audio pipeline for an upcoming flagship product. I’ve also co-led the development of a Speech Enhancement algorithm for real-time denoising and dereverberation, and our training approach was recently published at&nbsp;
+        <a className="underline-link" href="https://www.logitech.com/en-eu/products/video-conferencing.html" target="_blank" rel="noreferrer"> Logitech</a>, where I work on Echo Cancellation for our video-conferencing devices and manage the audio pipeline for an upcoming flagship product. I’ve also co-led the development of a Speech Enhancement algorithm for real-time denoising and dereverberation, and our training approach was recently published at&nbsp;
         <a className="underline-link" href="https://arxiv.org/abs/2505.21156" target="_blank" rel="noreferrer">Interspeech 2025</a>.
       </p>
 
       <p>
         Previously, I co-founded&nbsp;
         <strong>Echolair</strong>, a music AI startup that transforms samples into unique variations, and served as Founder-in-Residence at&nbsp;
-        <a className="underline-link" href="https://thesoundofai.com/" target="_blank" rel="noreferrer">The Sound of AI Accelerator</a>. I also developed the first AI-powered Acoustic Echo Cancellation system at&nbsp;
+        <a className="underline-link" href="https://thesoundofai.com/" target="_blank" rel="noreferrer">The Sound of AI Accelerator</a>. I also co-developed the first AI-powered Acoustic Echo Cancellation system at&nbsp;
         <a className="underline-link" href="https://zoom.us/" target="_blank" rel="noreferrer"> Zoom</a>, successfully deployed in Zoom Rooms, and built NLP models for recommendation systems at&nbsp;
         <a className="underline-link" href="https://shopee.sg/" target="_blank" rel="noreferrer">Shopee</a> serving eight countries.
       </p>

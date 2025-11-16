@@ -4,7 +4,7 @@ import "./other-projects.scss"
 
 const otherProjectsData = [
   {
-  "name": "Shortcut Flow Matching for Speech Enhancement (Submitted @ ICASSP 2025)",
+  "name": "Shortcut Flow Matching for Speech Enhancement (Submitted to ICASSP 2026)",
   "url": "https://arxiv.org/pdf/2509.21522",
   "description": "Introduced a one-stage, step-invariant flow-matching model for speech enhancement (SFMSE) that enables high-quality denoising in a single step while matching perceptual performance of diffusion-based baselines with ~60 neural evaluations.",
   "used": [

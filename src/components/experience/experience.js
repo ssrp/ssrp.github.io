@@ -5,8 +5,8 @@ import "./experience.scss"
 const experienceData = [
   {
     "company": "Logitech Singapore",
-    "url": "https://www.logitech.com/",
-    "time": "Jan 2024 - Present",
+    "url": "https://www.logitech.com/en-eu/products/video-conferencing.html",
+    "time": "Since Jan 2024",
     "position": "Lead Audio AI/ML Engineer"
   },
   {
