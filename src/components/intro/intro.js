@@ -75,7 +75,7 @@ const Intro = () => {
       </div>
       
       <div className="intro__image">
-        <img src={profileImage} alt="Picture didn't load, a thousand words lost." className="intro__profile-pic" />
+        <img src={profileImage} alt="404: a thousand words lost" className="intro__profile-pic" />
       </div>
     </div>
   </header>
