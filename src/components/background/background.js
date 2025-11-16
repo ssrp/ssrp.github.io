@@ -25,7 +25,8 @@ const Background = () => (
       <p>
         I graduated from&nbsp;
         <a className="underline-link" href="https://www.iitrpr.ac.in/" target="_blank" rel="noreferrer">Indian Institute of Technology Ropar</a> in 2018 and conducted graduate research at&nbsp;
-        <a className="underline-link" href="https://www.nus.edu.sg/" target="_blank" rel="noreferrer">National University of Singapore</a> on Computational Sound Scene Analysis, publishing in IEEE ICASSP 2019.
+        <a className="underline-link" href="https://www.nus.edu.sg/" target="_blank" rel="noreferrer">National University of Singapore</a> on Computational Sound Scene Analysis, publishing in&nbsp;
+        <a className="underline-link" href="https://arxiv.org/abs/1810.12642" target="_blank" rel="noreferrer">IEEE ICASSP 2019</a>.
       </p>
 
       <p>
