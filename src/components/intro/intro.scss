@@ -105,6 +105,13 @@
       box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       
+      // Center alt text when image fails to load
+      font-size: 1rem;
+      color: $blue;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 420px; // Match the height for vertical centering
+      
       &:hover {
         transform: scale(1.05);
         box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
@@ -113,35 +120,47 @@
       @include desktop {
         width: 375px;
         height: 375px;
+        line-height: 375px;
       }
       @include tablet {
         width: 330px;
         height: 330px;
+        line-height: 330px;
       }
       @include weird-medium {
         width: 240px;
         height: 240px;
         border: 2px solid $blue;
+        line-height: 240px;
+        font-size: 0.9rem;
       }
       @include phablet {
         width: 200px;
         height: 200px;
         border: 2px solid $blue;
+        line-height: 200px;
+        font-size: 0.8rem;
       }
       @include mobile {
         width: 180px;
         height: 180px;
         border: 2px solid $blue;
+        line-height: 180px;
+        font-size: 0.75rem;
       }
       @include small-mobile {
         width: 160px;
         height: 160px;
         border: 1px solid $blue;
+        line-height: 160px;
+        font-size: 0.7rem;
       }
       @include tiny-mobile {
         width: 140px;
         height: 140px;
         border: 1px solid $blue;
+        line-height: 140px;
+        font-size: 0.65rem;
       }
     }
 
