@@ -1,20 +1,148 @@
 @import "src/scss/globals";
   .intro {
-    padding: 120px 100px;
-    height: 100vh;
+    padding: 120px 100px 80px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     max-width: 1440px;
     margin: 0 auto;
     @include weird-medium {
-      padding: 120px 70px;
+      padding: 120px 70px 60px;
+      min-height: auto;
     }
     @include phablet {
-      padding: 120px 50px;
+      padding: 100px 50px 50px;
+      min-height: auto;
     }
     @include mobile {
-      padding: 70px 50px;
+      padding: 70px 50px 40px;
+      min-height: auto;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      width: 100%;
+      @include tablet {
+        gap: 40px;
+        align-items: flex-start;
+      }
+      @include weird-medium {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+      }
+      @include phablet {
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+      }
+      @include mobile {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+    }
+
+    &__text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 400px;
+      width: 100%;
+      @include tablet {
+        min-height: 350px;
+      }
+      @include weird-medium {
+        min-height: auto;
+        gap: 30px;
+        max-width: 100%;
+        text-align: left;
+      }
+      @include phablet {
+        min-height: auto;
+        gap: 25px;
+        max-width: 100%;
+        text-align: left;
+      }
+      @include mobile {
+        min-height: auto;
+        gap: 20px;
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+
+    &__image {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include weird-medium {
+        order: -1;
+        margin-bottom: 20px;
+      }
+      @include phablet {
+        order: -1;
+        margin-bottom: 15px;
+      }
+      @include mobile {
+        order: -1;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__profile-pic {
+      // 1.5x bigger than original sizes
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $blue;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
+      }
+
+      @include desktop {
+        width: 375px;
+        height: 375px;
+      }
+      @include tablet {
+        width: 330px;
+        height: 330px;
+      }
+      @include weird-medium {
+        width: 240px;
+        height: 240px;
+        border: 2px solid $blue;
+      }
+      @include phablet {
+        width: 200px;
+        height: 200px;
+        border: 2px solid $blue;
+      }
+      @include mobile {
+        width: 180px;
+        height: 180px;
+        border: 2px solid $blue;
+      }
+      @include small-mobile {
+        width: 160px;
+        height: 160px;
+        border: 1px solid $blue;
+      }
+      @include tiny-mobile {
+        width: 140px;
+        height: 140px;
+        border: 1px solid $blue;
+      }
     }
 
     &__hello, &__tagline {
